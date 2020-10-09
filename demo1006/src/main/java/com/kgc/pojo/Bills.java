@@ -8,24 +8,15 @@ public class Bills {
     private Integer id;
 
     private String title;
+
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date billTime;
 
     private Integer typeId;
 
-    private String price;
+    private Integer price;
 
-    private String explai;
-
-    private String typeName;
-
-    public String getTypeName() {
-        return typeName;
-    }
-
-    public void setTypeName(String typeName) {
-        this.typeName = typeName;
-    }
+    private String explaine;
 
     public Integer getId() {
         return id;
@@ -59,19 +50,19 @@ public class Bills {
         this.typeId = typeId;
     }
 
-    public String getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
-        this.price = price == null ? null : price.trim();
+    public void setPrice(Integer price) {
+        this.price = price;
     }
 
-    public String getExplai() {
-        return explai;
+    public String getExplaine() {
+        return explaine;
     }
 
-    public void setExplai(String explai) {
-        this.explai = explai == null ? null : explai.trim();
+    public void setExplaine(String explaine) {
+        this.explaine = explaine == null ? null : explaine.trim();
     }
 }

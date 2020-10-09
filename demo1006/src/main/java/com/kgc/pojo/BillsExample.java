@@ -392,133 +392,123 @@ public class BillsExample {
             return (Criteria) this;
         }
 
-        public Criteria andPriceEqualTo(String value) {
+        public Criteria andPriceEqualTo(Integer value) {
             addCriterion("price =", value, "price");
             return (Criteria) this;
         }
 
-        public Criteria andPriceNotEqualTo(String value) {
+        public Criteria andPriceNotEqualTo(Integer value) {
             addCriterion("price <>", value, "price");
             return (Criteria) this;
         }
 
-        public Criteria andPriceGreaterThan(String value) {
+        public Criteria andPriceGreaterThan(Integer value) {
             addCriterion("price >", value, "price");
             return (Criteria) this;
         }
 
-        public Criteria andPriceGreaterThanOrEqualTo(String value) {
+        public Criteria andPriceGreaterThanOrEqualTo(Integer value) {
             addCriterion("price >=", value, "price");
             return (Criteria) this;
         }
 
-        public Criteria andPriceLessThan(String value) {
+        public Criteria andPriceLessThan(Integer value) {
             addCriterion("price <", value, "price");
             return (Criteria) this;
         }
 
-        public Criteria andPriceLessThanOrEqualTo(String value) {
+        public Criteria andPriceLessThanOrEqualTo(Integer value) {
             addCriterion("price <=", value, "price");
             return (Criteria) this;
         }
 
-        public Criteria andPriceLike(String value) {
-            addCriterion("price like", value, "price");
-            return (Criteria) this;
-        }
-
-        public Criteria andPriceNotLike(String value) {
-            addCriterion("price not like", value, "price");
-            return (Criteria) this;
-        }
-
-        public Criteria andPriceIn(List<String> values) {
+        public Criteria andPriceIn(List<Integer> values) {
             addCriterion("price in", values, "price");
             return (Criteria) this;
         }
 
-        public Criteria andPriceNotIn(List<String> values) {
+        public Criteria andPriceNotIn(List<Integer> values) {
             addCriterion("price not in", values, "price");
             return (Criteria) this;
         }
 
-        public Criteria andPriceBetween(String value1, String value2) {
+        public Criteria andPriceBetween(Integer value1, Integer value2) {
             addCriterion("price between", value1, value2, "price");
             return (Criteria) this;
         }
 
-        public Criteria andPriceNotBetween(String value1, String value2) {
+        public Criteria andPriceNotBetween(Integer value1, Integer value2) {
             addCriterion("price not between", value1, value2, "price");
             return (Criteria) this;
         }
 
-        public Criteria andExplaiIsNull() {
-            addCriterion("explai is null");
+        public Criteria andExplaineIsNull() {
+            addCriterion("explaine is null");
             return (Criteria) this;
         }
 
-        public Criteria andExplaiIsNotNull() {
-            addCriterion("explai is not null");
+        public Criteria andExplaineIsNotNull() {
+            addCriterion("explaine is not null");
             return (Criteria) this;
         }
 
-        public Criteria andExplaiEqualTo(String value) {
-            addCriterion("explai =", value, "explai");
+        public Criteria andExplaineEqualTo(String value) {
+            addCriterion("explaine =", value, "explaine");
             return (Criteria) this;
         }
 
-        public Criteria andExplaiNotEqualTo(String value) {
-            addCriterion("explai <>", value, "explai");
+        public Criteria andExplaineNotEqualTo(String value) {
+            addCriterion("explaine <>", value, "explaine");
             return (Criteria) this;
         }
 
-        public Criteria andExplaiGreaterThan(String value) {
-            addCriterion("explai >", value, "explai");
+        public Criteria andExplaineGreaterThan(String value) {
+            addCriterion("explaine >", value, "explaine");
             return (Criteria) this;
         }
 
-        public Criteria andExplaiGreaterThanOrEqualTo(String value) {
-            addCriterion("explai >=", value, "explai");
+        public Criteria andExplaineGreaterThanOrEqualTo(String value) {
+            addCriterion("explaine >=", value, "explaine");
             return (Criteria) this;
         }
 
-        public Criteria andExplaiLessThan(String value) {
-            addCriterion("explai <", value, "explai");
+        public Criteria andExplaineLessThan(String value) {
+            addCriterion("explaine <", value, "explaine");
             return (Criteria) this;
         }
 
-        public Criteria andExplaiLessThanOrEqualTo(String value) {
-            addCriterion("explai <=", value, "explai");
+        public Criteria andExplaineLessThanOrEqualTo(String value) {
+            addCriterion("explaine <=", value, "explaine");
             return (Criteria) this;
         }
 
-        public Criteria andExplaiLike(String value) {
-            addCriterion("explai like", value, "explai");
+        public Criteria andExplaineLike(String value) {
+            addCriterion("explaine like", value, "explaine");
             return (Criteria) this;
         }
 
-        public Criteria andExplaiNotLike(String value) {
-            addCriterion("explai not like", value, "explai");
+        public Criteria andExplaineNotLike(String value) {
+            addCriterion("explaine not like", value, "explaine");
             return (Criteria) this;
         }
 
-        public Criteria andExplaiIn(List<String> values) {
-            addCriterion("explai in", values, "explai");
+        public Criteria andExplaineIn(List<String> values) {
+            addCriterion("explaine in", values, "explaine");
             return (Criteria) this;
         }
 
-        public Criteria andExplaiNotIn(List<String> values) {
-            addCriterion("explai not in", values, "explai");
+        public Criteria andExplaineNotIn(List<String> values) {
+            addCriterion("explaine not in", values, "explaine");
             return (Criteria) this;
         }
 
-        public Criteria andExplaiBetween(String value1, String value2) {
-            addCriterion("explai between", value1, value2, "explai");
+        public Criteria andExplaineBetween(String value1, String value2) {
+            addCriterion("explaine between", value1, value2, "explaine");
             return (Criteria) this;
         }
 
-        public Criteria andExplaiNotBetween(String value1, String value2) {
-            addCriterion("explai not between", value1, value2, "explai");
+        public Criteria andExplaineNotBetween(String value1, String value2) {
+            addCriterion("explaine not between", value1, value2, "explaine");
             return (Criteria) this;
         }
     }

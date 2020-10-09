@@ -6,8 +6,8 @@
     <result column="title" property="title" jdbcType="VARCHAR" />
     <result column="bill_time" property="billTime" jdbcType="DATE" />
     <result column="type_id" property="typeId" jdbcType="INTEGER" />
-    <result column="price" property="price" jdbcType="VARCHAR" />
-    <result column="explai" property="explai" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="INTEGER" />
+    <result column="explaine" property="explaine" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -68,7 +68,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, title, bill_time, type_id, price, explai
+    id, title, bill_time, type_id, price, explaine
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.kgc.pojo.BillsExample" >
     select
@@ -102,10 +102,10 @@
   </delete>
   <insert id="insert" parameterType="com.kgc.pojo.Bills" >
     insert into bills (id, title, bill_time, 
-      type_id, price, explai
+      type_id, price, explaine
       )
     values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{billTime,jdbcType=DATE}, 
-      #{typeId,jdbcType=INTEGER}, #{price,jdbcType=VARCHAR}, #{explai,jdbcType=VARCHAR}
+      #{typeId,jdbcType=INTEGER}, #{price,jdbcType=INTEGER}, #{explaine,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.kgc.pojo.Bills" >
@@ -126,8 +126,8 @@
       <if test="price != null" >
         price,
       </if>
-      <if test="explai != null" >
-        explai,
+      <if test="explaine != null" >
+        explaine,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -144,10 +144,10 @@
         #{typeId,jdbcType=INTEGER},
       </if>
       <if test="price != null" >
-        #{price,jdbcType=VARCHAR},
+        #{price,jdbcType=INTEGER},
       </if>
-      <if test="explai != null" >
-        #{explai,jdbcType=VARCHAR},
+      <if test="explaine != null" >
+        #{explaine,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -173,10 +173,10 @@
         type_id = #{record.typeId,jdbcType=INTEGER},
       </if>
       <if test="record.price != null" >
-        price = #{record.price,jdbcType=VARCHAR},
+        price = #{record.price,jdbcType=INTEGER},
       </if>
-      <if test="record.explai != null" >
-        explai = #{record.explai,jdbcType=VARCHAR},
+      <if test="record.explaine != null" >
+        explaine = #{record.explaine,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -189,8 +189,8 @@
       title = #{record.title,jdbcType=VARCHAR},
       bill_time = #{record.billTime,jdbcType=DATE},
       type_id = #{record.typeId,jdbcType=INTEGER},
-      price = #{record.price,jdbcType=VARCHAR},
-      explai = #{record.explai,jdbcType=VARCHAR}
+      price = #{record.price,jdbcType=INTEGER},
+      explaine = #{record.explaine,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -208,10 +208,10 @@
         type_id = #{typeId,jdbcType=INTEGER},
       </if>
       <if test="price != null" >
-        price = #{price,jdbcType=VARCHAR},
+        price = #{price,jdbcType=INTEGER},
       </if>
-      <if test="explai != null" >
-        explai = #{explai,jdbcType=VARCHAR},
+      <if test="explaine != null" >
+        explaine = #{explaine,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -221,8 +221,8 @@
     set title = #{title,jdbcType=VARCHAR},
       bill_time = #{billTime,jdbcType=DATE},
       type_id = #{typeId,jdbcType=INTEGER},
-      price = #{price,jdbcType=VARCHAR},
-      explai = #{explai,jdbcType=VARCHAR}
+      price = #{price,jdbcType=INTEGER},
+      explaine = #{explaine,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>
